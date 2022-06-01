@@ -16,3 +16,10 @@ npm run build
 cd ..
 php artisan serve
 ```
+
+## Secure env config
+Add in .gitignore
+```sh
+.env
+.env.backup
+```
