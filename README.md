@@ -1,19 +1,18 @@
 # laravel-vue-vite
 Laravel Vue Vite SPA
 
-## Laravel install
+## Init
 ```sh
+# Update php
+cd laravel-vue-vite
 composer update
-```
 
-## Vue install
-```sh
-cd laravel-vue-vite/vue-project
+# Vue install
+cd vue-project
 npm install
 npm run build
-```
 
-## Laravel run local server
-```sh
+# Laravel run local server
+cd ..
 php artisan serve
 ```
