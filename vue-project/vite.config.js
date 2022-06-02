@@ -3,6 +3,9 @@ import { fileURLToPath, URL } from 'url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+const { resolve } = require('path')
+import pkg from './package.json';
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
@@ -12,12 +15,13 @@ export default defineConfig({
     }
   },
   build: {
+    outDir: resolve(__dirname, '../public'),
     rollupOptions: {
       output: {
         dir: '../public',
-        chunkFileNames: "chunk-[name].js",
-        entryFileNames: '[name].js',
-        assetFileNames: '[name].[ext]',
+        chunkFileNames: "js/[name].js",
+        entryFileNames: 'js/[name].js',
+        assetFileNames: 'js/[name].[ext]',
         manualChunks: undefined,
       }
     }
