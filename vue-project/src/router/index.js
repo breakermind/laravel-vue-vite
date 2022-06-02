@@ -23,6 +23,11 @@ const router = createRouter({
       name: 'params',
       component: () => import('../views/ParamsView.vue')
     },
+    {
+      path: '/map',
+      name: 'map',
+      component: () => import('../views/MapView.vue')
+    },
     // { path: '/activate/:id/:code', component: Activate, name: 'activate' },
     // { path: '/panel', component: Profil, name: 'panel.profil', meta: { requiresAuth: true }},
     // {

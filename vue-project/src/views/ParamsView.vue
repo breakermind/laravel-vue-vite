@@ -20,6 +20,10 @@ export default {
 <style scoped>
 span { float: left; padding: 10px; }
 
+.about {
+  margin-top: 20px;
+}
+
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;

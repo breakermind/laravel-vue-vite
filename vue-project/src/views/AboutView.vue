@@ -5,6 +5,9 @@
 </template>
 
 <style>
+.about {
+  margin-top: 20px;
+}
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
