@@ -72,42 +72,6 @@ export default {
 </template>
 ```
 
-## Vue javascript
-
-### Add javascript file
-```js
-// vue-project/public/scripts/sample.js after build will be in dist/scripts/sample.js
-let some_data = 'App Name 123'
-
-window.onload = function() {
-  console.log(`Variable ${some_data}`)
-}
-```
-
-### Load scripts
-```vue
-<script>
-export default {
-  data() {
-    return {
-      title: 'Hello'
-    }
-  },
-  mounted() {
-    // Load external script
-    let rs = document.createElement('script')
-    rs.setAttribute('src', 'https://www.google.com/recaptcha/api.js')
-    document.head.appendChild(rs)
-
-    // Load local script
-    let o = document.createElement('script')
-    o.setAttribute('src', '/scripts/sample.js')
-    document.head.appendChild(o)
-  }
-}
-</script>
-```
-
 ## Events
 
 ### Scroll event
@@ -208,26 +172,6 @@ export default {
 </script>
 ```
 
-### Load scripts async
-```js
-function loadScript(src) {
-    return new Promise(function (resolve, reject) {
-        let s;
-        s = document.createElement('script');
-        s.src = src;
-        s.onload = resolve;
-        s.onerror = reject;
-        document.head.appendChild(s);
-    });
-}
-
-loadScript(cdnSource).then(successCallback)
-
-loadScript(cdnSource)
-  .catch(loadScript.bind(null, localSource))
-  .then(successCallback, failureCallback);
-```
-
 ## Watch
 
 ### Watch variables
@@ -275,6 +219,62 @@ export default {
   }
 }
 </script>
+```
+
+## Vue javascript
+
+### Add javascript file
+```js
+// vue-project/public/scripts/sample.js after build will be in dist/scripts/sample.js
+let some_data = 'App Name 123'
+
+window.onload = function() {
+  console.log(`Variable ${some_data}`)
+}
+```
+
+### Load scripts
+```vue
+<script>
+export default {
+  data() {
+    return {
+      title: 'Hello'
+    }
+  },
+  mounted() {
+    // Load external script
+    let rs = document.createElement('script')
+    rs.setAttribute('src', 'https://www.google.com/recaptcha/api.js')
+    document.head.appendChild(rs)
+
+    // Load local script
+    let o = document.createElement('script')
+    o.setAttribute('src', '/scripts/sample.js')
+    document.head.appendChild(o)
+  }
+}
+</script>
+```
+
+### Load scripts async
+```js
+function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+        let s;
+        s = document.createElement('script');
+        s.src = src;
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+    });
+}
+
+loadScript(cdnSource).then(successCallback)
+
+loadScript(cdnSource)
+  .catch(loadScript.bind(null, localSource))
+  .then(successCallback, failureCallback);
 ```
 
 ## Axios
