@@ -28,6 +28,11 @@ const router = createRouter({
       name: 'map',
       component: () => import('../views/MapView.vue')
     },
+    {
+      path: '/lang',
+      name: 'lang',
+      component: () => import('../views/Lang.vue')
+    },
     // { path: '/activate/:id/:code', component: Activate, name: 'activate' },
     // { path: '/panel', component: Profil, name: 'panel.profil', meta: { requiresAuth: true }},
     // {

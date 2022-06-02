@@ -21,6 +21,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 				<RouterLink to="/about">About</RouterLink>
 				<RouterLink to="/params/123/HELLO">Params</RouterLink>
 				<RouterLink to="/map">Map</RouterLink>
+				<RouterLink to="/lang">Lang</RouterLink>
 			</nav>
 		</div>
 	</header>
@@ -82,6 +83,7 @@ nav a.router-link-exact-active:hover {
 nav a {
 	display: inline-block;
 	padding: 0 1rem;
+	margin: 1rem 5px;
 	border-left: 1px solid var(--color-border);
 }
 
