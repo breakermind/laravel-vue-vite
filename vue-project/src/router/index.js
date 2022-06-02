@@ -18,11 +18,11 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     },
-    // {
-    //   path: '/params/:id/:code',
-    //   name: 'params',
-    //   component: () => import('../views/ParamsView.vue')
-    // },
+    {
+      path: '/params/:id/:code',
+      name: 'params',
+      component: () => import('../views/ParamsView.vue')
+    },
     // { path: '/activate/:id/:code', component: Activate, name: 'activate' },
     // { path: '/panel', component: Profil, name: 'panel.profil', meta: { requiresAuth: true }},
     // {
