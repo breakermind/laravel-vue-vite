@@ -1,5 +1,5 @@
 # laravel-vue-vite
-Laravel Vue Vite SPA (axios, tailwind css, google map).
+Laravel Vue Vite SPA (axios, tailwind css, google map, i18n locales, router, pinia store).
 
 ## Install
 
