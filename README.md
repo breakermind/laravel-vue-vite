@@ -1,5 +1,5 @@
 # laravel-vue-vite
-Laravel Vue Vite SPA (axios, tailwind css, google map).
+Laravel 9 and Vue 3 with Vite configuration (router, pinia store, axios, tailwind css, google map, i18n locales, scss).
 
 ## Install
 
