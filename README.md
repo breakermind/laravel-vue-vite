@@ -359,10 +359,17 @@ export default defineConfig({
     rollupOptions: {
       output: {
         dir: '../public',
-        chunkFileNames: "js/[name].js",
-        entryFileNames: 'js/[name].js',
-        assetFileNames: 'js/[name].[ext]',
+
+        // Multi dirs
+        assetFileNames: 'vue/[ext]/[name][extname]',
+        chunkFileNames: 'vue/chunks/[name].[hash].js',
+        entryFileNames: 'vue/js/[name].js',
         manualChunks: undefined,
+
+        // One dir
+        // chunkFileNames: "js/[name].js",
+        // entryFileNames: 'js/[name].js',
+        // assetFileNames: 'js/[name].[ext]',
       }
     }
   }
