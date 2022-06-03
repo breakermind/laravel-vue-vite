@@ -28,7 +28,8 @@ npm run dev
 npm run build
 ```
 
-## Vite config
+## Project Config
+
 ```js
 import { fileURLToPath, URL } from 'url'
 
@@ -51,17 +52,17 @@ export default defineConfig({
     rollupOptions: {
       output: {
         dir: '../public',
-
         // One dir
         // chunkFileNames: "js/[name].js",
         // entryFileNames: 'js/[name].js',
         // assetFileNames: 'js/[name].[ext]',
 
-        // Or multiple dirs
+        // Multi dir
         assetFileNames: 'vue/[ext]/[name][extname]',
         chunkFileNames: 'vue/chunks/[name].[hash].js',
         entryFileNames: 'vue/js/[name].js',
 
+        // Settings
         manualChunks: undefined,
       }
     }

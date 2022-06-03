@@ -31,7 +31,7 @@ const router = createRouter({
     {
       path: '/lang',
       name: 'lang',
-      component: () => import('../views/LangView.vue')
+      component: () => import('../views/Lang.vue')
     },
     // { path: '/activate/:id/:code', component: Activate, name: 'activate' },
     // { path: '/panel', component: Profil, name: 'panel.profil', meta: { requiresAuth: true }},
@@ -53,7 +53,6 @@ router.beforeEach((to) => {
   const main = useMainStore(pinia)
   if (to.meta.requiresAuth && !main.isLoggedIn) return '/login'
 })
-
 router.beforeEach(async (to, from, next) => {
   // Hide menu
   store.dispatch('closeMenu')

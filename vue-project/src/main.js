@@ -5,6 +5,8 @@ import App from './App.vue'
 import router from './router'
 
 import './assets/tailwind.css'
+import './assets/base.scss'
+
 import { createI18n } from 'vue-i18n'
 import messages from './lang'
 

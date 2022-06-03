@@ -23,10 +23,13 @@ export default defineConfig({
         // chunkFileNames: "js/[name].js",
         // entryFileNames: 'js/[name].js',
         // assetFileNames: 'js/[name].[ext]',
-        // Or multiple dirs
+
+        // Multi dir
         assetFileNames: 'vue/[ext]/[name][extname]',
         chunkFileNames: 'vue/chunks/[name].[hash].js',
         entryFileNames: 'vue/js/[name].js',
+
+        // Settings
         manualChunks: undefined,
       }
     }
